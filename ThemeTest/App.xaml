@@ -1,0 +1,19 @@
+﻿<Application x:Class="ThemeTest.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ThemeTest"
+             xmlns:resources="clr-namespace:ThemeTest.Resources"
+            StartupUri="MainWindow.xaml">
+    
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MyProject;component/Resources/DefaultButtonStyle.xaml" />
+                <!-- Merge the default theme (the squared theme) -->
+                <ResourceDictionary Source="{x:Static resources:ThemingResources.SquaredThemeResourcesFileUri}" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
